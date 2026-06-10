@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAST @ FIRE 2026 — Multilingual Agentic Search Task</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">MAST <span class="nav-logo-sub">@ FIRE 2026</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tracks">Tracks</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#participate">Participate</a></li>
+      <li><a href="#organizers">Organizers</a></li>
+      <li><a href="#register" class="nav-cta">Register</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ══════════════════════════════ -->
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">🔥 FIRE 2026 Shared Task</div>
+    <h1 class="hero-title">
+      <span class="hero-acronym">MAST</span>
+      <span class="hero-full">Multilingual Agentic Search Task</span>
+    </h1>
+    <p class="hero-tagline">
+      Can search agents answer complex questions posed in any language?
+    </p>
+    <p class="hero-desc">
+      MAST is a new shared task at FIRE 2026 that evaluates the performance of multilingual agentic systems (multilingual search & agents)
+      to retrieve evidence & produce correct answers for queries posed on 15+ typologically diverse languages.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">20+</span>
+        <span class="stat-label">Languages</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">700+</span>
+        <span class="stat-label">Query–Answer Pairs</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">~100K</span>
+        <span class="stat-label">Documents</span>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#register" class="btn btn-primary">Register Now</a>
+      <a href="#tracks" class="btn btn-outline">Explore Tracks</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═════════════════════════════ NEWS ═══════════════════════════════ -->
+<section class="news-bar">
+  <div class="container">
+    <span class="news-label">📣 News</span>
+    <ul class="news-list">
+      <li><span class="news-date">May 15, 2026</span> — Track website is live! Registration is now open.</li>
+      <li><span class="news-date">Jun 1, 2026</span> — Test data release for all languages. <a href="#">Download →</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═════════════════════════════ ABOUT ══════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>About MAST</h2>
+      <p class="section-sub">A cross-lingual agentic information retrieval challenge</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Agents combined with search tools has demonstrated impressive capabilities on complex
+          fact-seeking benchmarks such as <strong>BrowseComp</strong> <a href="https://openai.com/index/browsecomp/" target="_blank">[1]</a>. 
+          However, all existing search agent benchmarks are exclusively in English — leaving a critical question unanswered: how well do
+          agentic search systems perform when the user's query is expressed in their potentially native and non-English language?
+        </p>
+        <p>
+          <strong>MAST benchmark</strong> is focused on evaluation of multilingual agents. 
+          In our inaugral year, we are building on <strong>BrowseComp-Plus (ACL 2026)</strong> <a href="https://github.com/texttron/BrowseComp-Plus/" target="_blank">[2]</a>,
+          a reproducible & verifiable extension of BrowseComp with 830 challenging English queries with a verified English
+          corpus of ~100,000 documents and human judgments. This year, we are translating queries across 15 typologically diverse languages potentially spoken by over 1.6 billion people.
+          <!-- As part of MAST, we translate queries into 15 typologically diverse languages and challenge -->
+          <!-- systems to retrieve the necessary English evidence and produce the correct English answer. -->
+        </p>
+        <p>
+          This year's task is <em>cross-lingual</em>: queries are asked in one language, documents are in English,
+          and systems can reason, iteratively search, plan, and synthesize in either language. e.g., a search agent can ask a query in Chinese, use multilingual retriever to retrieve English documents for a given query in Chinese.
+        </p>
+        <p>
+          Next year, based on the feedback from this year's participants, we plan to extend MAST to use a multilingual corpus, and human-written queries across 15+ languages.
+        </p>
+        <div class="about-links">
+          <a href="https://github.com/texttron/BrowseComp-Plus/" class="pill" target="_blank">📄 BrowseComp-Plus</a>
+          <a href="#" class="pill">📊 Leaderboard</a>
+          <a href="#" class="pill">💾 Data</a>
+          <a href="#" class="pill">💬 Slack</a>
+        </div>
+      </div>
+      <div class="about-diagram">
+        <div class="diagram-box">
+          <div class="diagram-step query">
+            <div class="diagram-icon">🌐</div>
+            <div class="diagram-label">Multilingual Query</div>
+            <div class="diagram-eg">e.g., Chinese, Hindi, Swahili…</div>
+          </div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-step agent">
+            <div class="diagram-icon">🤖</div>
+            <div class="diagram-label">Agentic Search System</div>
+            <div class="diagram-eg">Iterative retrieval + reasoning</div>
+          </div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-step corpus">
+            <div class="diagram-icon">📚</div>
+            <div class="diagram-label">English Document Corpus</div>
+            <div class="diagram-eg">~100K BrowseComp-Plus docs</div>
+          </div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-step answer">
+            <div class="diagram-icon">✅</div>
+            <div class="diagram-label">English Answer</div>
+            <div class="diagram-eg">Short, verifiable, exact</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════ TRACKS ══════════════════════════════ -->
+<section class="section section-alt" id="tracks">
+  <div class="container">
+    <div class="section-header">
+      <h2>Two Tracks in 2026</h2>
+      <p class="section-sub">Choose the track that fits your research interest</p>
+    </div>
+    <div class="tracks-grid">
+
+      <!-- Track 1: MAST Multilingual -->
+      <div class="track-card track-multilingual">
+        <div class="track-top">
+          <div class="track-badge badge-blue">Track 1</div>
+          <h3 class="track-name">MAST Multilingual</h3>
+          <p class="track-tagline">Cross-lingual agentic search across 15 typologically diverse languages</p>
+        </div>
+        <div class="track-body">
+          <p>
+            Participating systems receive queries in one of <strong>15 non-English languages</strong> spanning
+            high, mid, and low-resource settings. The goal is to retrieve the relevant documents
+            from BrowseComp-Plus corpus and produce a correct, concise answer.
+          </p>
+          <div class="track-tiers">
+            <div class="tier tier-high">
+              <span class="tier-label">🟢 High Resource</span>
+              <span class="tier-langs">Chinese · French · Russian · Spanish · German</span>
+            </div>
+            <div class="tier tier-mid">
+              <span class="tier-label">🟡 Mid Resource</span>
+              <span class="tier-langs">Finnish · Arabic · Hindi · Bengali · Thai · Urdu</span>
+            </div>
+            <div class="tier tier-low">
+              <span class="tier-label">🔴 Low Resource</span>
+              <span class="tier-langs">Swahili · Tamil · Yoruba · Welsh · Māori</span>
+            </div>
+          </div>
+          <ul class="track-facts">
+            <li><span class="fact-icon">📝</span> ~50 queries per language</li>
+            <li><span class="fact-icon">📚</span> ~100,000 English BrowseComp-Plus documents</li>
+            <li><span class="fact-icon">📐</span> Evaluated on Recall (retrieval) + Answer Accuracy</li>
+            <li><span class="fact-icon">🔁</span> Agentic runs (iterative) and retrieval-only both accepted</li>
+          </ul>
+        </div>
+        <div class="track-footer">
+          <a href="#register" class="btn btn-primary btn-sm">Join Track 1</a>
+          <a href="#languages" class="btn btn-ghost btn-sm">View Languages →</a>
+        </div>
+      </div>
+
+      <!-- Track 2: MAST Indic -->
+      <div class="track-card track-indic">
+        <div class="track-top">
+          <div class="track-badge badge-orange">Track 2</div>
+          <h3 class="track-name">MAST Indic</h3>
+          <p class="track-tagline">Deep-research agents for the languages of South Asia</p>
+        </div>
+        <div class="track-body">
+          <p>
+            A dedicated track for <strong>Indic languages</strong>.
+            MAST Indic focuses on 10 Indic languages, morphologically rich languages,
+            and spoken commonly in India.
+          </p>
+          <div class="track-tiers">
+            <div class="tier tier-indic-mid">
+              <span class="tier-label">🟡 Mid Resource (Indic)</span>
+              <span class="tier-langs">Hindi · Bengali · Tamil · Telugu · Kannada · Marathi · Gujarati</span>
+            </div>
+            <div class="tier tier-indic-low">
+              <span class="tier-label">🔴 Low Resource (Indic)</span>
+              <span class="tier-langs">Punjabi · Odia · Malayalam </span>
+            </div>
+          </div>
+          <ul class="track-facts">
+            <li><span class="fact-icon">📝</span> ~50 queries per language across 10 Indic languages</li>
+            <li><span class="fact-icon">📚</span> ~100,000 English BrowseComp-Plus corpus</li>
+            <li><span class="fact-icon">🖋️</span> Covers 8 distinct scripts (Devanagari, Bengali, Tamil, Telugu, Kannada, Gujarati, Gurmukhi, Odia)</li>
+            <li><span class="fact-icon">📐</span> Evaluated on Recall (retrieval) + Answer Accuracy</li>
+            <li><span class="fact-icon">🤝</span> Collaboration with Indian NLP communities</li>
+          </ul>
+        </div>
+        <div class="track-footer">
+          <a href="#register" class="btn btn-secondary btn-sm">Join Track 2</a>
+          <a href="#indic-languages" class="btn btn-ghost btn-sm">View Languages →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ LANGUAGES ══════════════════════════════ -->
+<section class="section" id="languages">
+  <div class="container">
+    <div class="section-header">
+      <h2>Languages</h2>
+      <p class="section-sub">Track 1 — MAST Multilingual</p>
+    </div>
+
+    <div class="lang-tabs" role="tablist">
+      <button class="lang-tab active" data-tab="multilingual" role="tab">MAST Multilingual</button>
+      <button class="lang-tab" data-tab="indic" role="tab">MAST Indic</button>
+    </div>
+
+    <!-- MAST Multilingual table -->
+    <div class="lang-table-wrap" id="tab-multilingual">
+      <table class="lang-table">
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Code</th>
+            <th>Family</th>
+            <th>Script</th>
+            <th>Speakers (M)</th>
+            <th>Resource Tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tier-high-row">
+            <td colspan="6" class="tier-group-header">🟢 High Resource</td>
+          </tr>
+          <tr><td>Chinese</td><td><code>zh</code></td><td>Sino-Tibetan</td><td>Han</td><td>1,390</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr><td>French</td><td><code>fr</code></td><td>Indo-European</td><td>Latin</td><td>312</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr><td>Russian</td><td><code>ru</code></td><td>Indo-European</td><td>Cyrillic</td><td>210</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr><td>Spanish</td><td><code>es</code></td><td>Indo-European</td><td>Latin</td><td>561</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr><td>German</td><td><code>de</code></td><td>Indo-European</td><td>Latin</td><td>132</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr class="tier-mid-row">
+            <td colspan="6" class="tier-group-header">🟡 Mid Resource</td>
+          </tr>
+          <tr><td>Arabic</td><td><code>ar</code></td><td>Afro-Asiatic</td><td>Arabic</td><td>380</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Bengali</td><td><code>bn</code></td><td>Indo-European</td><td>Bengali</td><td>280</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Finnish</td><td><code>fi</code></td><td>Uralic</td><td>Latin</td><td>5</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Hindi</td><td><code>hi</code></td><td>Indo-European</td><td>Devanagari</td><td>610</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Thai</td><td><code>th</code></td><td>Kra-Dai</td><td>Thai</td><td>70</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Urdu</td><td><code>ur</code></td><td>Indo-European</td><td>Arabic</td><td>246</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr class="tier-low-row">
+            <td colspan="6" class="tier-group-header">🔴 Low Resource</td>
+          </tr>
+          <tr><td>Māori</td><td><code>mi</code></td><td>Austronesian</td><td>Latin</td><td>0.2</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Swahili</td><td><code>sw</code></td><td>Niger-Congo</td><td>Latin</td><td>180</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Tamil</td><td><code>ta</code></td><td>Dravidian</td><td>Tamil</td><td>86</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Welsh</td><td><code>cy</code></td><td>Indo-European</td><td>Latin</td><td>0.8</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Yoruba</td><td><code>yo</code></td><td>Niger-Congo</td><td>Latin</td><td>50</td><td><span class="badge-tier low">Low</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MAST Indic table -->
+    <div class="lang-table-wrap hidden" id="tab-indic">
+      <p class="section-sub" id="indic-languages" style="margin-bottom:1rem;">Track 2 — MAST Indic: 12 languages of South Asia</p>
+      <table class="lang-table">
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Code</th>
+            <th>Script</th>
+            <th>Family</th>
+            <th>Speakers (M)</th>
+            <th>Resource Tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tier-high-row">
+            <td colspan="6" class="tier-group-header">🟢 High Resource (Indic)</td>
+          </tr>
+          <tr><td>Hindi</td><td><code>hi</code></td><td>Devanagari</td><td>Indo-European</td><td>610</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr><td>Bengali</td><td><code>bn</code></td><td>Bengali</td><td>Indo-Aryan</td><td>280</td><td><span class="badge-tier high">High</span></td></tr>
+          <tr class="tier-mid-row">
+            <td colspan="6" class="tier-group-header">🟡 Mid Resource (Indic)</td>
+          </tr>
+          <tr><td>Tamil</td><td><code>ta</code></td><td>Tamil</td><td>Dravidian</td><td>86</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Telugu</td><td><code>te</code></td><td>Telugu</td><td>Dravidian</td><td>82</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Kannada</td><td><code>kn</code></td><td>Kannada</td><td>Dravidian</td><td>60</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Marathi</td><td><code>mr</code></td><td>Devanagari</td><td>Indo-Aryan</td><td>95</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Gujarati</td><td><code>gu</code></td><td>Gujarati</td><td>Indo-Aryan</td><td>62</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr class="tier-low-row">
+            <td colspan="6" class="tier-group-header">🔴 Low Resource (Indic)</td>
+          </tr>
+          <tr><td>Punjabi</td><td><code>pa</code></td><td>Gurmukhi</td><td>Indo-Aryan</td><td>113</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Odia</td><td><code>or</code></td><td>Odia</td><td>Indo-Aryan</td><td>38</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Malayalam</td><td><code>ml</code></td><td>Malayalam</td><td>Dravidian</td><td>38</td><td><span class="badge-tier low">Low</span></td></tr>
+          <tr><td>Assamese</td><td><code>as</code></td><td>Bengali</td><td>Indo-Aryan</td><td>25</td><td><span class="badge-tier low">Low</span></td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">* MAST Indic covers 8 distinct scripts and both the Indo-Aryan and Dravidian language families, making it one of the most script-diverse evaluation tracks for information retrieval.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ EVALUATION ══════════════════════════════ -->
+<section class="section section-alt" id="evaluation">
+  <div class="container">
+    <div class="section-header">
+      <h2>Task &amp; Evaluation</h2>
+      <p class="section-sub">What systems must do, and how they are measured</p>
+    </div>
+    <div class="eval-grid">
+      <div class="eval-card">
+        <div class="eval-icon">🎯</div>
+        <h3>The Task</h3>
+        <p>Given a query in a non-English language and the full BrowseComp-Plus English corpus, participating systems must <strong>retrieve relevant evidence documents</strong> and produce a <strong>short, correct English answer</strong>.</p>
+        <p>Systems can be fully agentic (iteratively issuing search calls) or retrieval-only (submitting a ranked document list).</p>
+      </div>
+      <div class="eval-card">
+        <div class="eval-icon">📐</div>
+        <h3>Retrieval Evaluation</h3>
+        <p>Every team must submit a list of retrieved document IDs. We evaluate using standard <strong>Recall</strong> against the human-verified relevance labels from BrowseComp-Plus, computed per language and aggregated per resource tier.</p>
+      </div>
+      <div class="eval-card">
+        <div class="eval-icon">🧠</div>
+        <h3>Answer Accuracy</h3>
+        <p>Answer accuracy is evaluated using an open-source LLM judge (e.g., <code>gpt-oss-120b</code>) comparing the system's predicted English answer against the BrowseComp-Plus ground-truth answer. This is more robust than exact-match evaluation.</p>
+      </div>
+      <div class="eval-card">
+        <div class="eval-icon">📦</div>
+        <h3>Submission Format</h3>
+        <p>Runs are submitted as <strong>JSONL files</strong> containing reasoning steps, tool calls, retrieved document IDs per search round, and a final output answer. Maximum <strong>3 runs per language</strong> per team.</p>
+        <a href="#submission-format" class="eval-link">View format spec →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ SUBMISSION FORMAT ═══════════════════════ -->
+<section class="section" id="submission-format">
+  <div class="container">
+    <div class="section-header">
+      <h2>Submission Format</h2>
+      <p class="section-sub">JSONL output format for agentic runs</p>
+    </div>
+    <div class="code-block-wrap">
+      <div class="code-header">
+        <span>output.jsonl</span>
+        <span class="code-lang">JSONL</span>
+      </div>
+      <pre class="code-block"><code>{
+  "query_id": 11,
+  "language": "chinese",
+  "retriever": "Qwen/Qwen3-Embedding-8B",
+  "llm": "Alibaba-NLP/Tongyi-DeepResearch-30B-A3B",
+  "tool_call_counts": { "search": 24 },
+  "retrieved_docids": [
+    ["81120", "10986", "11064", "83777", "9823"],
+    ...
+    ["81120", ...]  <span class="code-comment">// 24th search round</span>
+  ],
+  "result": [
+    {
+      "type": "reasoning",
+      "tool_name": null,
+      "arguments": null,
+      "output": "Let me search for information about..."
+    },
+    {
+      "type": "tool_call",
+      "tool_name": "search",
+      "arguments": "query: \"As of December 2023\" coordinator research group founded in 2009",
+      "output": "[{\"docid\": \"81120\", \"score\": 8.43, \"snippet\": \"...\"}]"
+    },
+    {
+      "type": "output_text",
+      "tool_name": null,
+      "arguments": null,
+      "output": "Explanation: I attempted to solve this ... Exact Answer: compassionate pugilist"
+    }
+  ]
+}</code></pre>
+    </div>
+    <p class="table-note" style="margin-top:1rem;">No more than 3 output files per language per team. There is no restriction on the language used by the LLM during reasoning; however, direct translation of the original query to English as the only retrieval strategy is discouraged.</p>
+  </div>
+</section>
+
+<!-- ════════════════════════ TIMELINE ════════════════════════════════ -->
+<section class="section section-alt" id="timeline">
+  <div class="container">
+    <div class="section-header">
+      <h2>Schedule</h2>
+      <p class="section-sub">MAST @ FIRE 2026 proposed timeline</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item done">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">June 10, 2026</div>
+          <div class="tl-event">Track website opens · Registration begins</div>
+        </div>
+      </div>
+      <div class="tl-item active">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">June 15, 2026</div>
+          <div class="tl-event">Test data released for all languages</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">July 15, 2026</div>
+          <div class="tl-event">Run submission deadline</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">July 30, 2026</div>
+          <div class="tl-event">Declaration of results · Public leaderboard</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">August 30, 2026</div>
+          <div class="tl-event">Working note submission deadline</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">September 30, 2026</div>
+          <div class="tl-event">Camera-ready copies of working notes due</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-date">October 15, 2026</div>
+          <div class="tl-event">Overview paper · FIRE 2026 Conference</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PARTICIPATE ══════════════════════════════ -->
+<section class="section" id="participate">
+  <div class="container">
+    <div class="section-header">
+      <h2>How to Participate</h2>
+      <p class="section-sub">Three steps to join MAST</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Register</h3>
+        <p>Fill in the registration form with your team name, member names, affiliations, and the language(s) you plan to participate in. Teams are limited to 4 members.</p>
+        <a href="#register" class="btn btn-primary btn-sm">Register →</a>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Download Data</h3>
+        <p>Access the test queries (released June 1, 2026) and the BrowseComp-Plus English corpus through our GitHub repository and Hugging Face organization. Baseline retrieval runs will be provided.</p>
+        <a href="#" class="btn btn-outline btn-sm">Data (Jun 1) →</a>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Submit Runs</h3>
+        <p>Submit up to 3 JSONL output files per language before July 15, 2026. Submit a working note describing your system and approach (minimum 2 pages, ACM format).</p>
+        <a href="#submission-format" class="btn btn-outline btn-sm">Submission format →</a>
+      </div>
+    </div>
+    <div class="connect-row">
+      <h3>Stay Connected</h3>
+      <div class="connect-links">
+        <a href="#" class="connect-pill">📬 Mailing List</a>
+        <a href="#" class="connect-pill">💬 Slack Workspace</a>
+        <a href="#" class="connect-pill">🐙 GitHub</a>
+        <a href="#" class="connect-pill">🤗 Hugging Face</a>
+        <a href="mailto:mast-fire2026@uwaterloo.ca" class="connect-pill">✉️ Email Organizers</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ REGISTRATION ═══════════════════════════════ -->
+<section class="section section-register" id="register">
+  <div class="container">
+    <div class="register-box">
+      <div class="register-text">
+        <h2>Register for MAST 2026</h2>
+        <p>Registration is free and open to academic groups, industry labs, and individual researchers. After registering, you will be added to the track mailing list and Slack workspace.</p>
+        <ul class="register-list">
+          <li>✔ Access to all released data and baselines</li>
+          <li>✔ Track announcements and updates</li>
+          <li>✔ Eligibility to submit runs and working notes</li>
+          <li>✔ Invitation to the FIRE 2026 results session</li>
+        </ul>
+      </div>
+      <div class="register-action">
+        <a href="#" class="btn btn-white btn-lg">Register via Google Forms →</a>
+        <p class="register-note">Registration closes July 1, 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ ORGANIZERS ═════════════════════════════════ -->
+<section class="section" id="organizers">
+  <div class="container">
+    <div class="section-header">
+      <h2>Organizers</h2>
+      <p class="section-sub">University of Waterloo</p>
+    </div>
+    <div class="organizers-grid">
+      <div class="organizer">
+        <div class="organizer-avatar" style="background: linear-gradient(135deg,#3b82f6,#1d4ed8);">NT</div>
+        <div class="organizer-name">Nandan Thakur</div>
+        <div class="organizer-role">PhD Graduate</div>
+        <div class="organizer-inst">University of Waterloo</div>
+        <p class="organizer-bio">Lead of BEIR and MIRACL. Co-organizer of TREC-RAG 2024 &amp; 2025.</p>
+      </div>
+      <div class="organizer">
+        <div class="organizer-avatar" style="background: linear-gradient(135deg,#8b5cf6,#6d28d9);">CZ</div>
+        <div class="organizer-name">Crystina Zhang</div>
+        <div class="organizer-role">PhD Candidate</div>
+        <div class="organizer-inst">University of Waterloo</div>
+        <p class="organizer-bio">Lead of Mr. TyDi and MIRACL. Co-organizer of CIRAL @ FIRE 2023.</p>
+      </div>
+      <div class="organizer">
+        <div class="organizer-avatar" style="background: linear-gradient(135deg,#10b981,#047857);">XM</div>
+        <div class="organizer-name">Xueguang Ma</div>
+        <div class="organizer-role">PhD Candidate</div>
+        <div class="organizer-inst">University of Waterloo</div>
+        <p class="organizer-bio">Creator of RepLLaMA, DRAMA, DSE. Lead of BrowseComp-Plus.</p>
+      </div>
+      <div class="organizer">
+        <div class="organizer-avatar" style="background: linear-gradient(135deg,#f59e0b,#d97706);">ZC</div>
+        <div class="organizer-name">Zijian Chen</div>
+        <div class="organizer-role">Undergraduate Researcher</div>
+        <div class="organizer-inst">University of Waterloo</div>
+        <p class="organizer-bio">Lead developer of BrowseComp-Plus and AgentIR.</p>
+      </div>
+      <div class="organizer">
+        <div class="organizer-avatar" style="background: linear-gradient(135deg,#ef4444,#b91c1c);">JL</div>
+        <div class="organizer-name">Jimmy Lin</div>
+        <div class="organizer-role">Professor &amp; Cheriton Chair</div>
+        <div class="organizer-inst">University of Waterloo</div>
+        <p class="organizer-bio">David R. Cheriton Chair in Computer Science.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ PRIOR WORK ═══════════════════════════════ -->
+<section class="section section-alt" id="prior">
+  <div class="container">
+    <div class="section-header">
+      <h2>Related Work &amp; Baselines</h2>
+      <p class="section-sub">Building on a strong foundation</p>
+    </div>
+    <div class="related-grid">
+      <a href="https://github.com/texttron/BrowseComp-Plus/" class="related-card" target="_blank">
+        <div class="related-icon">🔍</div>
+        <div class="related-name">BrowseComp-Plus</div>
+        <div class="related-desc">Source queries and corpus. 830 complex English queries + ~100K verified documents.</div>
+      </a>
+      <a href="https://project-miracl.github.io/" class="related-card" target="_blank">
+        <div class="related-icon">🌍</div>
+        <div class="related-name">MIRACL</div>
+        <div class="related-desc">Multilingual monolingual retrieval benchmark. 18 languages, WSDM 2023 Cup.</div>
+      </a>
+      <a href="#" class="related-card">
+        <div class="related-icon">🌍</div>
+        <div class="related-name">CIRAL</div>
+        <div class="related-desc">Cross-lingual retrieval for African languages at FIRE 2023. SIGIR 2024 Best Paper Nominee.</div>
+      </a>
+      <a href="#" class="related-card">
+        <div class="related-icon">📊</div>
+        <div class="related-name">NeuCLIR</div>
+        <div class="related-desc">Neural CLIR shared task (TREC 2022–2024). Cross-lingual retrieval for Chinese, Persian, Russian.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FOOTER ════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">MAST @ FIRE 2026</span>
+      <p>Multilingual Agentic Search Task<br/>A shared evaluation track at FIRE 2026.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <div class="footer-col-title">Track</div>
+        <a href="#about">About</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#languages">Languages</a>
+        <a href="#timeline">Schedule</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Participate</div>
+        <a href="#register">Register</a>
+        <a href="#submission-format">Submission Format</a>
+        <a href="#">Leaderboard</a>
+        <a href="#">Data Download</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Connect</div>
+        <a href="#">Mailing List</a>
+        <a href="#">Slack</a>
+        <a href="#">GitHub</a>
+        <a href="#">Hugging Face</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 MAST Organizers, University of Waterloo.</span>
+      <span>Part of <a href="http://fire.irsi.res.in/" target="_blank">FIRE 2026</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    hamburger.classList.toggle('active');
+  });
+
+  // Language tabs
+  document.querySelectorAll('.lang-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.lang-table-wrap').forEach(w => w.classList.add('hidden'));
+      tab.classList.add('active');
+      document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+    });
+  });
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        navLinks.classList.remove('open');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

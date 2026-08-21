@@ -22,6 +22,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#tracks">Tracks</a></li>
       <li><a href="#languages">Languages</a></li>
+      <li><a href="#leaderboard">Leaderboard</a></li>
       <li><a href="#timeline">Timeline</a></li>
       <li><a href="#working-notes">Working Notes</a></li>
       <li><a href="#participate">Participate</a></li>
@@ -116,7 +117,7 @@
         </p>
         <div class="about-links">
           <a href="https://github.com/texttron/BrowseComp-Plus/" class="pill" target="_blank">📄 BrowseComp-Plus</a>
-          <a href="#" class="pill">📊 Leaderboard</a>
+          <a href="#leaderboard" class="pill">📊 Leaderboard</a>
           <a href="https://huggingface.co/mast-benchmark/" class="pill" target="_blank">💾 Data</a>
           <a href="https://acmsigir.slack.com/archives/C0BA538H49L" class="pill" target="_blank">💬 Slack</a>
         </div>
@@ -181,11 +182,11 @@
             </div>
             <div class="tier tier-mid">
               <span class="tier-label">🟡 Mid Resource</span>
-              <span class="tier-langs">Finnish · Arabic · Hindi · Bengali · Thai · Urdu</span>
+              <span class="tier-langs">Finnish · Arabic · Hindi · Bengali · Thai · Urdu · Tamil</span>
             </div>
             <div class="tier tier-low">
               <span class="tier-label">🔴 Low Resource</span>
-              <span class="tier-langs">Swahili · Tamil · Welsh</span>
+              <span class="tier-langs">Swahili · Welsh</span>
             </div>
           </div>
           <ul class="track-facts">
@@ -289,11 +290,11 @@
           <tr><td>Hindi</td><td><code>hi</code></td><td>Indo-European</td><td>India</td><td>Devanagari</td><td>584</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr><td>Thai</td><td><code>th</code></td><td>Kra-Dai</td><td>Thailand</td><td>Thai</td><td>56</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr><td>Urdu</td><td><code>ur</code></td><td>Indo-European</td><td>Pakistan, India</td><td>Arabic</td><td>313</td><td><span class="badge-tier mid">Mid</span></td></tr>
+          <tr><td>Tamil</td><td><code>ta</code></td><td>Dravidian</td><td>India, Sri Lanka, Singapore, Malaysia</td><td>Tamil</td><td>91</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr class="tier-low-row">
             <td colspan="7" class="tier-group-header">🔴 Low Resource</td>
           </tr>
           <tr><td>Swahili</td><td><code>sw</code></td><td>Niger-Congo</td><td>Tanzania, Kenya, Uganda, DR Congo</td><td>Latin</td><td>194</td><td><span class="badge-tier low">Low</span></td></tr>
-          <tr><td>Tamil</td><td><code>ta</code></td><td>Dravidian</td><td>India, Sri Lanka, Singapore, Malaysia</td><td>Tamil</td><td>91</td><td><span class="badge-tier low">Low</span></td></tr>
           <tr><td>Welsh</td><td><code>cy</code></td><td>Indo-European</td><td>Wales, Argentina</td><td>Latin</td><td>0.92</td><td><span class="badge-tier low">Low</span></td></tr>
         </tbody>
       </table>
@@ -320,7 +321,6 @@
           </tr>
           <tr><td>Hindi</td><td><code>hi</code></td><td>Indo-European</td><td>India</td><td>Devanagari</td><td>584</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr><td>Bengali</td><td><code>bn</code></td><td>Indo-European</td><td>India, Bangladesh</td><td>Bengali</td><td>280</td><td><span class="badge-tier mid">Mid</span></td></tr>
-          <tr><td>Punjabi</td><td><code>pa</code></td><td>Indo-European</td><td>India, Pakistan</td><td>Gurmukhi</td><td>223</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr><td>Telugu</td><td><code>te</code></td><td>Dravidian</td><td>India</td><td>Telugu</td><td>100</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr><td>Tamil</td><td><code>ta</code></td><td>Dravidian</td><td>India, Sri Lanka, Singapore, Malaysia</td><td>Tamil</td><td>91</td><td><span class="badge-tier mid">Mid</span></td></tr>
           <tr><td>Gujarati</td><td><code>gu</code></td><td>Indo-European</td><td>India</td><td>Gujarati</td><td>65</td><td><span class="badge-tier mid">Mid</span></td></tr>
@@ -328,6 +328,7 @@
           <tr class="tier-low-row">
             <td colspan="7" class="tier-group-header">🔴 Low Resource (Indic)</td>
           </tr>
+          <tr><td>Punjabi</td><td><code>pa</code></td><td>Indo-European</td><td>India, Pakistan</td><td>Gurmukhi</td><td>223</td><td><span class="badge-tier low">Low</span></td></tr>
           <tr><td>Malayalam</td><td><code>ml</code></td><td>Dravidian</td><td>India</td><td>Malayalam</td><td>46</td><td><span class="badge-tier low">Low</span></td></tr>
           <tr><td>Odia</td><td><code>or</code></td><td>Indo-European</td><td>India</td><td>Odia</td><td>45</td><td><span class="badge-tier low">Low</span></td></tr>
         </tbody>
@@ -357,8 +358,9 @@
       </div>
       <div class="eval-card">
         <div class="eval-icon">🧠</div>
-        <h3>Answer Accuracy</h3>
-        <p>Answer accuracy is evaluated using an open-source LLM judge (e.g., <code>gpt-oss-120b</code>) comparing the system's predicted English answer against the BrowseComp-Plus ground-truth answer.</p>
+        <h3>Answer Accuracy (EM)</h3>
+        <p>The headline leaderboard metric is <strong>Exact Match (EM) accuracy</strong>: the system's predicted English <code>Exact Answer</code> is compared against the BrowseComp-Plus ground-truth answer after normalisation, and averaged over languages. An open-source LLM judge (e.g., <code>gpt-oss-120b</code>) is additionally used to adjudicate semantically equivalent answers that differ in surface form.</p>
+        <a href="#leaderboard" class="eval-link">View leaderboard →</a>
       </div>
       <div class="eval-card">
         <div class="eval-icon">📦</div>
@@ -370,8 +372,158 @@
   </div>
 </section>
 
+<!-- ════════════════════════ LEADERBOARD ═════════════════════════════ -->
+<section class="section" id="leaderboard">
+  <div class="container">
+    <div class="section-header">
+      <h2>Leaderboard</h2>
+      <p class="section-sub">Official ranking by <strong>Exact Match (EM) accuracy</strong> on the held-out test queries</p>
+    </div>
+
+    <div class="lb-tabs" role="tablist">
+      <button class="lb-tab active" data-lb="multilingual" role="tab">MAST Multilingual</button>
+      <button class="lb-tab" data-lb="indic" role="tab">MAST Indic</button>
+    </div>
+
+    <!-- Track 1 — MAST Multilingual leaderboard -->
+    <div class="lb-table-wrap" id="lb-multilingual">
+      <p class="section-sub lb-track-caption">Track 1 — MAST Multilingual: 15 typologically diverse languages</p>
+      <table class="lang-table lb-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>LLM</th>
+            <th>Retriever</th>
+            <th>Type</th>
+            <th class="lb-primary">EM Overall ▾</th>
+            <th>EM 🟢 High</th>
+            <th>EM 🟡 Mid</th>
+            <th>EM 🔴 Low</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--
+            To add a result row, copy the template below and fill in the values.
+            Keep rows sorted by "EM Overall" (descending); ranks 1-3 get the medal classes.
+
+            <tr>
+              <td><span class="lb-rank lb-rank-1">1</span></td>
+              <td class="lb-system">LLM name <a href="URL" target="_blank" class="lb-link">↗</a></td>
+              <td><code>Retriever</code></td>
+              <td><span class="lb-type agentic">Agentic</span></td>
+              <td class="lb-primary lb-score">00.0</td>
+              <td>00.0</td>
+              <td>00.0</td>
+              <td>00.0</td>
+            </tr>
+          -->
+          <tr>
+            <td><span class="lb-rank lb-rank-1">1</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-30B</a> <span class="lb-tag">Baseline</span></td>
+            <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
+            <td><span class="lb-type agentic">Agentic</span></td>
+            <td class="lb-primary lb-score">38.7</td>
+            <td>40.8</td>
+            <td>40.6</td>
+            <td>26.0</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="lb-sub-heading">Per-language EM accuracy (in %)</h4>
+      <table class="lang-table lb-table lb-perlang">
+        <thead>
+          <tr>
+            <th rowspan="2">LLM</th>
+            <th colspan="6">🟢 High</th>
+            <th colspan="7">🟡 Mid</th>
+            <th colspan="2">🔴 Low</th>
+          </tr>
+          <tr>
+            <th class="lb-lang high">en</th><th class="lb-lang high">zh</th><th class="lb-lang high">fr</th><th class="lb-lang high">ru</th><th class="lb-lang high">es</th><th class="lb-lang high">de</th>
+            <th class="lb-lang mid">ar</th><th class="lb-lang mid">bn</th><th class="lb-lang mid">fi</th><th class="lb-lang mid">hi</th><th class="lb-lang mid">th</th><th class="lb-lang mid">ur</th><th class="lb-lang mid">ta</th>
+            <th class="lb-lang low">sw</th><th class="lb-lang low">cy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lb-system">Tongyi-30B</td>
+            <td>54</td><td>30</td><td>42</td><td>42</td><td>43</td><td>34</td>
+            <td>50</td><td>42</td><td>32</td><td>44</td><td>36</td><td>42</td><td>38</td>
+            <td>22</td><td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Track 2 — MAST Indic leaderboard -->
+    <div class="lb-table-wrap hidden" id="lb-indic">
+      <p class="section-sub lb-track-caption">Track 2 — MAST Indic: 9 Indian languages</p>
+      <table class="lang-table lb-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>LLM</th>
+            <th>Retriever</th>
+            <th>Type</th>
+            <th class="lb-primary">EM Overall ▾</th>
+            <th>EM 🟡 Mid</th>
+            <th>EM 🔴 Low</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Same row template as Track 1, but with 7 columns (no High-resource tier). -->
+          <tr>
+            <td><span class="lb-rank lb-rank-1">1</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-30B</a> <span class="lb-tag">Baseline</span></td>
+            <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
+            <td><span class="lb-type agentic">Agentic</span></td>
+            <td class="lb-primary lb-score">36.7</td>
+            <td>38.3</td>
+            <td>33.3</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h4 class="lb-sub-heading">Per-language EM accuracy (in %)</h4>
+      <table class="lang-table lb-table lb-perlang">
+        <thead>
+          <tr>
+            <th rowspan="2">LLM</th>
+            <th colspan="6">🟡 Mid</th>
+            <th colspan="3">🔴 Low</th>
+          </tr>
+          <tr>
+            <th class="lb-lang mid">hi</th><th class="lb-lang mid">bn</th><th class="lb-lang mid">te</th><th class="lb-lang mid">ta</th><th class="lb-lang mid">gu</th><th class="lb-lang mid">kn</th>
+            <th class="lb-lang low">pa</th><th class="lb-lang low">ml</th><th class="lb-lang low">or</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="lb-system">Tongyi-30B</td>
+            <td>44</td><td>44</td><td>36</td><td>40</td><td>30</td><td>36</td>
+            <td>38</td><td>28</td><td>34</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="lb-legend">
+      <span class="lb-legend-item"><span class="lb-type agentic">Agentic</span> iterative search + reasoning</span>
+      <span class="lb-legend-item"><span class="lb-type retrieval">Retrieval-only</span> single-shot retrieval, no agent loop</span>
+    </div>
+
+    <p class="table-note">
+      All EM scores are reported as percentages over the held-out test queries. <strong>EM Overall</strong> is the
+      simple average of the per-language EM scores. Teams that submit
+      runs but do not submit a working note may be excluded from the final leaderboard. Where a team submits multiple
+      runs for a language, only the best-scoring eligible run is ranked.
+    </p>
+  </div>
+</section>
+
 <!-- ════════════════════════ SUBMISSION FORMAT ═══════════════════════ -->
-<section class="section" id="submission-format">
+<section class="section section-alt" id="submission-format">
   <div class="container">
     <div class="section-header">
       <h2>Submission Format</h2>
@@ -425,7 +577,7 @@
 </section>
 
 <!-- ════════════════════════ WORKING NOTES ═══════════════════════════ -->
-<section class="section section-alt" id="working-notes">
+<section class="section" id="working-notes">
   <div class="container">
     <div class="section-header">
       <h2>Working Notes</h2>
@@ -702,6 +854,7 @@
       <div class="footer-col">
         <div class="footer-col-title">Participate</div>
         <a href="#register">Register</a>
+        <a href="#leaderboard">Leaderboard</a>
         <a href="#submission-format">Submission Format</a>
         <a href="https://huggingface.co/mast-benchmark/" target="_blank">Data Download</a>
       </div>
@@ -744,6 +897,16 @@
       document.querySelectorAll('.lang-table-wrap').forEach(w => w.classList.add('hidden'));
       tab.classList.add('active');
       document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
+    });
+  });
+
+  // Leaderboard tabs (scoped separately from the language tabs)
+  document.querySelectorAll('.lb-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.lb-table-wrap').forEach(w => w.classList.add('hidden'));
+      tab.classList.add('active');
+      document.getElementById('lb-' + tab.dataset.lb).classList.remove('hidden');
     });
   });
 

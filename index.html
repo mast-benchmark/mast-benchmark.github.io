@@ -396,9 +396,8 @@
             <th>Retriever</th>
             <th>Type</th>
             <th class="lb-primary">EM Overall ▾</th>
-            <th>EM 🟢 High</th>
-            <th>EM 🟡 Mid</th>
-            <th>EM 🔴 Low</th>
+            <th>Recall Overall</th>
+            <th>Search Turns Avg.</th>
           </tr>
         </thead>
         <tbody>
@@ -412,9 +411,8 @@
               <td><code>Retriever</code></td>
               <td><span class="lb-type agentic">Agentic</span></td>
               <td class="lb-primary lb-score">00.0</td>
-              <td>00.0</td>
-              <td>00.0</td>
-              <td>00.0</td>
+              <td class="lb-score">00.0</td>
+              <td class="lb-score">00.0</td>
             </tr>
           -->
           <tr>
@@ -422,36 +420,41 @@
             <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-30B</a> <span class="lb-tag">Baseline</span></td>
             <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
             <td><span class="lb-type agentic">Agentic</span></td>
-            <td class="lb-primary lb-score">38.7</td>
-            <td>40.8</td>
-            <td>40.6</td>
-            <td>26.0</td>
+            <td class="lb-primary lb-score">38.40</td>
+            <td class="lb-score">47.00</td>
+            <td class="lb-score">26.22</td>
           </tr>
         </tbody>
       </table>
 
-      <h4 class="lb-sub-heading">Per-language EM accuracy (in %)</h4>
-      <table class="lang-table lb-table lb-perlang">
+      <h4 class="lb-sub-heading">Per-language results</h4>
+      <table class="lang-table lb-table lb-perlang lb-metrics">
         <thead>
           <tr>
-            <th rowspan="2">LLM</th>
-            <th colspan="6">🟢 High</th>
-            <th colspan="7">🟡 Mid</th>
-            <th colspan="2">🔴 Low</th>
+            <th rowspan="2">Language</th>
+            <th rowspan="2">Tier</th>
+            <th colspan="3" class="lb-model-group">Tongyi-30B</th>
           </tr>
-          <tr>
-            <th class="lb-lang high">en</th><th class="lb-lang high">zh</th><th class="lb-lang high">fr</th><th class="lb-lang high">ru</th><th class="lb-lang high">es</th><th class="lb-lang high">de</th>
-            <th class="lb-lang mid">ar</th><th class="lb-lang mid">bn</th><th class="lb-lang mid">fi</th><th class="lb-lang mid">hi</th><th class="lb-lang mid">th</th><th class="lb-lang mid">ur</th><th class="lb-lang mid">ta</th>
-            <th class="lb-lang low">sw</th><th class="lb-lang low">cy</th>
+          <tr class="lb-metric-headings">
+            <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="lb-system">Tongyi-30B</td>
-            <td>54</td><td>30</td><td>42</td><td>42</td><td>43</td><td>34</td>
-            <td>50</td><td>42</td><td>32</td><td>44</td><td>36</td><td>42</td><td>38</td>
-            <td>22</td><td>30</td>
-          </tr>
+          <tr><td class="lb-language">English <code>en</code></td><td><span class="badge-tier high">High</span></td><td>54.00</td><td>64.36</td><td>30.60</td></tr>
+          <tr><td class="lb-language">Chinese <code>zh</code></td><td><span class="badge-tier high">High</span></td><td>30.00</td><td>40.71</td><td>23.28</td></tr>
+          <tr><td class="lb-language">French <code>fr</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>48.94</td><td>28.18</td></tr>
+          <tr><td class="lb-language">Russian <code>ru</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>51.93</td><td>26.66</td></tr>
+          <tr><td class="lb-language">Spanish <code>es</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>50.81</td><td>28.06</td></tr>
+          <tr><td class="lb-language">German <code>de</code></td><td><span class="badge-tier high">High</span></td><td>34.00</td><td>46.69</td><td>26.12</td></tr>
+          <tr><td class="lb-language">Arabic <code>ar</code></td><td><span class="badge-tier mid">Mid</span></td><td>50.00</td><td>52.92</td><td>26.08</td></tr>
+          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.17</td><td>29.40</td></tr>
+          <tr><td class="lb-language">Finnish <code>fi</code></td><td><span class="badge-tier mid">Mid</span></td><td>32.00</td><td>50.16</td><td>29.92</td></tr>
+          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>51.03</td><td>25.12</td></tr>
+          <tr><td class="lb-language">Thai <code>th</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>40.56</td><td>19.88</td></tr>
+          <tr><td class="lb-language">Urdu <code>ur</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.56</td><td>27.48</td></tr>
+          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>43.94</td><td>25.16</td></tr>
+          <tr><td class="lb-language">Swahili <code>sw</code></td><td><span class="badge-tier low">Low</span></td><td>22.00</td><td>29.84</td><td>25.28</td></tr>
+          <tr><td class="lb-language">Welsh <code>cy</code></td><td><span class="badge-tier low">Low</span></td><td>30.00</td><td>30.37</td><td>22.10</td></tr>
         </tbody>
       </table>
     </div>
@@ -467,43 +470,46 @@
             <th>Retriever</th>
             <th>Type</th>
             <th class="lb-primary">EM Overall ▾</th>
-            <th>EM 🟡 Mid</th>
-            <th>EM 🔴 Low</th>
+            <th>Recall Overall</th>
+            <th>Search Turns Avg.</th>
           </tr>
         </thead>
         <tbody>
-          <!-- Same row template as Track 1, but with 7 columns (no High-resource tier). -->
+          <!-- Track 2 rows use the same seven-column format as Track 1. -->
           <tr>
             <td><span class="lb-rank lb-rank-1">1</span></td>
             <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-30B</a> <span class="lb-tag">Baseline</span></td>
             <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
             <td><span class="lb-type agentic">Agentic</span></td>
-            <td class="lb-primary lb-score">36.7</td>
-            <td>38.3</td>
-            <td>33.3</td>
+            <td class="lb-primary lb-score">35.78</td>
+            <td class="lb-score">46.32</td>
+            <td class="lb-score">26.02</td>
           </tr>
         </tbody>
       </table>
 
-      <h4 class="lb-sub-heading">Per-language EM accuracy (in %)</h4>
-      <table class="lang-table lb-table lb-perlang">
+      <h4 class="lb-sub-heading">Per-language results</h4>
+      <table class="lang-table lb-table lb-perlang lb-metrics">
         <thead>
           <tr>
-            <th rowspan="2">LLM</th>
-            <th colspan="6">🟡 Mid</th>
-            <th colspan="3">🔴 Low</th>
+            <th rowspan="2">Language</th>
+            <th rowspan="2">Tier</th>
+            <th colspan="3" class="lb-model-group">Tongyi-30B</th>
           </tr>
-          <tr>
-            <th class="lb-lang mid">hi</th><th class="lb-lang mid">bn</th><th class="lb-lang mid">te</th><th class="lb-lang mid">ta</th><th class="lb-lang mid">gu</th><th class="lb-lang mid">kn</th>
-            <th class="lb-lang low">pa</th><th class="lb-lang low">ml</th><th class="lb-lang low">or</th>
+          <tr class="lb-metric-headings">
+            <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="lb-system">Tongyi-30B</td>
-            <td>44</td><td>44</td><td>36</td><td>40</td><td>30</td><td>36</td>
-            <td>38</td><td>28</td><td>34</td>
-          </tr>
+          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>51.03</td><td>25.12</td></tr>
+          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.17</td><td>29.40</td></tr>
+          <tr><td class="lb-language">Telugu <code>te</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>41.08</td><td>23.98</td></tr>
+          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>43.94</td><td>25.16</td></tr>
+          <tr><td class="lb-language">Gujarati <code>gu</code></td><td><span class="badge-tier mid">Mid</span></td><td>30.00</td><td>36.62</td><td>20.66</td></tr>
+          <tr><td class="lb-language">Kannada <code>kn</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>51.40</td><td>29.96</td></tr>
+          <tr><td class="lb-language">Punjabi <code>pa</code></td><td><span class="badge-tier low">Low</span></td><td>38.00</td><td>50.72</td><td>29.80</td></tr>
+          <tr><td class="lb-language">Malayalam <code>ml</code></td><td><span class="badge-tier low">Low</span></td><td>28.00</td><td>45.82</td><td>23.78</td></tr>
+          <tr><td class="lb-language">Odia <code>or</code></td><td><span class="badge-tier low">Low</span></td><td>34.00</td><td>45.13</td><td>26.32</td></tr>
         </tbody>
       </table>
     </div>
@@ -514,8 +520,8 @@
     </div>
 
     <p class="table-note">
-      All EM scores are reported as percentages over the held-out test queries. <strong>EM Overall</strong> is the
-      simple average of the per-language EM scores. Teams that submit
+      EM and recall are reported as percentages over the held-out test queries; search turns are average search calls per query.
+      Each overall value is the simple average of its per-language values. Teams that submit
       runs but do not submit a working note may be excluded from the final leaderboard. Where a team submits multiple
       runs for a language, only the best-scoring eligible run is ranked.
     </p>

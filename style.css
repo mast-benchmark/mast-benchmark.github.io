@@ -615,7 +615,13 @@ code {
 .lb-table-wrap { overflow-x: auto; }
 .lb-track-caption { margin-bottom: 1rem; }
 
-.lb-table th { white-space: nowrap; }
+.lb-table { font-size: 0.8rem; }
+.lb-table th {
+  padding: 0.55rem 0.7rem;
+  font-size: 0.68rem;
+  white-space: nowrap;
+}
+.lb-table td { padding: 0.5rem 0.7rem; }
 .lb-table th.lb-primary {
   color: var(--blue);
   background: var(--blue-light);
@@ -690,6 +696,30 @@ code {
 .lb-perlang thead tr:first-child th:first-child,
 .lb-perlang td:first-child { text-align: left; }
 .lb-perlang thead tr:first-child th { border-bottom: 1px solid var(--gray-200); }
+
+.lb-metrics { max-width: 760px; }
+.lb-metrics .lb-model-group {
+  color: var(--blue);
+  background: var(--blue-light);
+  border-left: 2px solid #bfdbfe;
+}
+.lb-metrics .lb-metric-headings th {
+  min-width: 5.5rem;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.64rem;
+}
+.lb-metrics .lb-metric-headings th:first-child,
+.lb-metrics tbody td:nth-child(3) {
+  border-left: 2px solid var(--gray-200);
+}
+.lb-perlang.lb-metrics td { font-size: 0.76rem; }
+.lb-metrics .lb-language {
+  min-width: 9rem;
+  font-family: var(--font);
+  font-weight: 600;
+  color: var(--gray-900);
+}
+.lb-metrics .lb-language code { margin-left: 0.25rem; font-size: 0.72rem; }
 
 .lb-lang::before {
   content: "";

@@ -431,6 +431,15 @@
             <td class="lb-score">47.00</td>
             <td class="lb-score">26.22</td>
           </tr>
+          <tr>
+            <td><span class="lb-rank lb-rank-2">2</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/rl-research/DR-Tulu-8B" target="_blank" rel="noopener" class="lb-link">DR-Tulu-8B</a> <span class="lb-tag">Baseline</span></td>
+            <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
+            <td><span class="lb-type agentic">Agentic</span></td>
+            <td class="lb-primary lb-score">13.37</td>
+            <td class="lb-score">24.19</td>
+            <td class="lb-score">4.77</td>
+          </tr>
         </tbody>
       </table>
 
@@ -441,27 +450,29 @@
             <th rowspan="2">Language</th>
             <th rowspan="2">Tier</th>
             <th colspan="3" class="lb-model-group">Tongyi-DR-30B</th>
+            <th colspan="3" class="lb-model-group">DR-Tulu-8B</th>
           </tr>
           <tr class="lb-metric-headings">
+            <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="lb-language">English <code>en</code></td><td><span class="badge-tier high">High</span></td><td>54.00</td><td>64.36</td><td>30.60</td></tr>
-          <tr><td class="lb-language">Chinese <code>zh</code></td><td><span class="badge-tier high">High</span></td><td>30.00</td><td>40.71</td><td>23.28</td></tr>
-          <tr><td class="lb-language">French <code>fr</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>48.94</td><td>28.18</td></tr>
-          <tr><td class="lb-language">Russian <code>ru</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>51.93</td><td>26.66</td></tr>
-          <tr><td class="lb-language">Spanish <code>es</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>50.81</td><td>28.06</td></tr>
-          <tr><td class="lb-language">German <code>de</code></td><td><span class="badge-tier high">High</span></td><td>34.00</td><td>46.69</td><td>26.12</td></tr>
-          <tr><td class="lb-language">Arabic <code>ar</code></td><td><span class="badge-tier mid">Mid</span></td><td>50.00</td><td>52.92</td><td>26.08</td></tr>
-          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.17</td><td>29.40</td></tr>
-          <tr><td class="lb-language">Finnish <code>fi</code></td><td><span class="badge-tier mid">Mid</span></td><td>32.00</td><td>50.16</td><td>29.92</td></tr>
-          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>51.03</td><td>25.12</td></tr>
-          <tr><td class="lb-language">Thai <code>th</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>40.56</td><td>19.88</td></tr>
-          <tr><td class="lb-language">Urdu <code>ur</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.56</td><td>27.48</td></tr>
-          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>43.94</td><td>25.16</td></tr>
-          <tr><td class="lb-language">Swahili <code>sw</code></td><td><span class="badge-tier low">Low</span></td><td>22.00</td><td>29.84</td><td>25.28</td></tr>
-          <tr><td class="lb-language">Welsh <code>cy</code></td><td><span class="badge-tier low">Low</span></td><td>30.00</td><td>30.37</td><td>22.10</td></tr>
+          <tr><td class="lb-language">English <code>en</code></td><td><span class="badge-tier high">High</span></td><td>54.00</td><td>64.36</td><td>30.60</td><td>32.00</td><td>43.63</td><td>5.00</td></tr>
+          <tr><td class="lb-language">Chinese <code>zh</code></td><td><span class="badge-tier high">High</span></td><td>30.00</td><td>40.71</td><td>23.28</td><td>12.24</td><td>21.51</td><td>4.72</td></tr>
+          <tr><td class="lb-language">French <code>fr</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>48.94</td><td>28.18</td><td>18.00</td><td>31.94</td><td>4.62</td></tr>
+          <tr><td class="lb-language">Russian <code>ru</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>51.93</td><td>26.66</td><td>18.00</td><td>30.53</td><td>4.84</td></tr>
+          <tr><td class="lb-language">Spanish <code>es</code></td><td><span class="badge-tier high">High</span></td><td>42.00</td><td>50.81</td><td>28.06</td><td>16.00</td><td>27.33</td><td>4.62</td></tr>
+          <tr><td class="lb-language">German <code>de</code></td><td><span class="badge-tier high">High</span></td><td>34.00</td><td>46.69</td><td>26.12</td><td>10.00</td><td>23.97</td><td>4.86</td></tr>
+          <tr><td class="lb-language">Arabic <code>ar</code></td><td><span class="badge-tier mid">Mid</span></td><td>50.00</td><td>52.92</td><td>26.08</td><td>12.00</td><td>26.56</td><td>4.56</td></tr>
+          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.17</td><td>29.40</td><td>16.00</td><td>21.82</td><td>4.78</td></tr>
+          <tr><td class="lb-language">Finnish <code>fi</code></td><td><span class="badge-tier mid">Mid</span></td><td>32.00</td><td>50.16</td><td>29.92</td><td>14.29</td><td>23.22</td><td>5.06</td></tr>
+          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>51.03</td><td>25.12</td><td>16.00</td><td>26.20</td><td>4.82</td></tr>
+          <tr><td class="lb-language">Thai <code>th</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>40.56</td><td>19.88</td><td>8.00</td><td>23.85</td><td>4.88</td></tr>
+          <tr><td class="lb-language">Urdu <code>ur</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.56</td><td>27.48</td><td>12.00</td><td>20.81</td><td>4.60</td></tr>
+          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>43.94</td><td>25.16</td><td>10.00</td><td>21.79</td><td>4.52</td></tr>
+          <tr><td class="lb-language">Swahili <code>sw</code></td><td><span class="badge-tier low">Low</span></td><td>22.00</td><td>29.84</td><td>25.28</td><td>2.00</td><td>7.29</td><td>4.92</td></tr>
+          <tr><td class="lb-language">Welsh <code>cy</code></td><td><span class="badge-tier low">Low</span></td><td>30.00</td><td>30.37</td><td>22.10</td><td>4.00</td><td>12.39</td><td>4.78</td></tr>
         </tbody>
       </table>
     </div>
@@ -492,6 +503,15 @@
             <td class="lb-score">46.32</td>
             <td class="lb-score">26.02</td>
           </tr>
+          <tr>
+            <td><span class="lb-rank lb-rank-2">2</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/rl-research/DR-Tulu-8B" target="_blank" rel="noopener" class="lb-link">DR-Tulu-8B</a> <span class="lb-tag">Baseline</span></td>
+            <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
+            <td><span class="lb-type agentic">Agentic</span></td>
+            <td class="lb-primary lb-score">16.25</td>
+            <td class="lb-score">26.60</td>
+            <td class="lb-score">4.45</td>
+          </tr>
         </tbody>
       </table>
 
@@ -502,21 +522,23 @@
             <th rowspan="2">Language</th>
             <th rowspan="2">Tier</th>
             <th colspan="3" class="lb-model-group">Tongyi-DR-30B</th>
+            <th colspan="3" class="lb-model-group">DR-Tulu-8B</th>
           </tr>
           <tr class="lb-metric-headings">
+            <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>51.03</td><td>25.12</td></tr>
-          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.17</td><td>29.40</td></tr>
-          <tr><td class="lb-language">Telugu <code>te</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>41.08</td><td>23.98</td></tr>
-          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>43.94</td><td>25.16</td></tr>
-          <tr><td class="lb-language">Gujarati <code>gu</code></td><td><span class="badge-tier mid">Mid</span></td><td>30.00</td><td>36.62</td><td>20.66</td></tr>
-          <tr><td class="lb-language">Kannada <code>kn</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>51.40</td><td>29.96</td></tr>
-          <tr><td class="lb-language">Punjabi <code>pa</code></td><td><span class="badge-tier low">Low</span></td><td>38.00</td><td>50.72</td><td>29.80</td></tr>
-          <tr><td class="lb-language">Malayalam <code>ml</code></td><td><span class="badge-tier low">Low</span></td><td>28.00</td><td>45.82</td><td>23.78</td></tr>
-          <tr><td class="lb-language">Odia <code>or</code></td><td><span class="badge-tier low">Low</span></td><td>34.00</td><td>45.13</td><td>26.32</td></tr>
+          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>51.03</td><td>25.12</td><td>16.00</td><td>26.20</td><td>4.82</td></tr>
+          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>51.17</td><td>29.40</td><td>16.00</td><td>21.82</td><td>4.78</td></tr>
+          <tr><td class="lb-language">Telugu <code>te</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>41.08</td><td>23.98</td><td>16.00</td><td>24.23</td><td>4.58</td></tr>
+          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>43.94</td><td>25.16</td><td>10.00</td><td>21.79</td><td>4.52</td></tr>
+          <tr><td class="lb-language">Gujarati <code>gu</code></td><td><span class="badge-tier mid">Mid</span></td><td>30.00</td><td>36.62</td><td>20.66</td><td>20.00</td><td>33.06</td><td>4.28</td></tr>
+          <tr><td class="lb-language">Kannada <code>kn</code></td><td><span class="badge-tier mid">Mid</span></td><td>36.00</td><td>51.40</td><td>29.96</td><td>18.00</td><td>34.54</td><td>4.12</td></tr>
+          <tr><td class="lb-language">Punjabi <code>pa</code></td><td><span class="badge-tier low">Low</span></td><td>38.00</td><td>50.72</td><td>29.80</td><td>18.00</td><td>28.88</td><td>4.44</td></tr>
+          <tr><td class="lb-language">Malayalam <code>ml</code></td><td><span class="badge-tier low">Low</span></td><td>28.00</td><td>45.82</td><td>23.78</td><td>20.00</td><td>32.09</td><td>4.20</td></tr>
+          <tr><td class="lb-language">Odia <code>or</code></td><td><span class="badge-tier low">Low</span></td><td>34.00</td><td>45.13</td><td>26.32</td><td>12.24</td><td>16.81</td><td>4.34</td></tr>
         </tbody>
       </table>
     </div>
@@ -647,7 +669,7 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
         <h3>Format</h3>
         <p>Working notes must follow the <strong>CEUR-WS single-column format</strong> (<code>ceurart</code> style, as used by the CEUR Workshop Proceedings). Minimum <strong>6 pages</strong>, maximum <strong>10 pages</strong>, <em>including</em> references. Use descriptive titles — do not include team or track names in the title.</p>
         <p>- <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/hpvjjzhjxzjk" target="_blank">Overleaf Template (CEUR-WS)</a></p>
-        <p>- <a href="https://ceur-ws.org/Vol-XXX/CEURART.zip" target="_blank">LaTeX / Word Template (ceurart)</a></p>
+        <p>- <a href="https://ceur-ws.org/Vol-4173/" target="_blank">Examples (FIRE 2025 Working Notes)</a></p>
       </div>
 
       <div class="wn-card">

@@ -1055,7 +1055,7 @@ code {
 /* ── Organizers ───────────────────────────────────────────────────── */
 .organizers-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 .organizer {
@@ -1219,3 +1219,16 @@ code {
   .related-grid    { grid-template-columns: 1fr; }
   .hero-stats .stat { padding: 0 1rem; }
 }
+
+/* ── How to submit: steps stacked one below the other ─────────────── */
+.submit-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.submit-steps .step { margin: 0; }
+.submit-steps .step p:last-child { margin-bottom: 0; }
+.submit-steps .code-block-wrap { margin: 0.25rem 0 0; }
+.submit-steps .code-block { font-size: 0.8rem; white-space: pre; }

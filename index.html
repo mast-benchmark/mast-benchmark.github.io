@@ -580,31 +580,42 @@
     </div>
     <p class="table-note" style="margin-top:1rem;">No more than 3 output files per language per team. There is no restriction on the language used by the LLM during reasoning; however, direct translation of the original query to English as the only retrieval strategy is discouraged.</p>
 
-    <div class="section-header" id="how-to-submit" style="margin-top:3rem;">
+    <div class="section-header" id="how-to-submit" style="margin-top:3.5rem;">
       <h2>How to Submit</h2>
       <p class="section-sub">Validate offline, then upload through the submission portal.</p>
     </div>
-    <div class="wn-grid">
-      <div class="wn-card">
-        <div class="wn-icon">🧪</div>
-        <h3>1. Validate with the CLI</h3>
+    <div class="submit-steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Validate with the CLI</h3>
         <p>Every file is one language: one JSON object per line covering all 50 official query ids of that language, with the same <code>language</code>, <code>llm</code> and <code>retriever</code> in every record. Check files before uploading with <a href="https://github.com/mast-benchmark/mast-validate" target="_blank"><code>mast-validate</code></a>; the portal runs exactly the same checks.</p>
-        <pre class="code-block" style="margin-top:0.75rem;"><code>pip install git+https://github.com/mast-benchmark/mast-validate
+        <div class="code-block-wrap">
+          <div class="code-header">
+            <div class="code-header-left">
+              <span class="code-dot dot-red"></span>
+              <span class="code-dot dot-yellow"></span>
+              <span class="code-dot dot-green"></span>
+              <span class="code-filename">terminal</span>
+            </div>
+            <span class="code-lang">bash</span>
+          </div>
+          <pre class="code-block"><code>pip install git+https://github.com/mast-benchmark/mast-validate
 mast-validate runs/hi.jsonl --track indic
 mast-validate runs.zip --track multilingual --json report.json</code></pre>
-        <p>Exit code 0 is clean, 1 warnings only, 2 errors. Errors block a file; warnings do not, but each one costs score.</p>
+        </div>
+        <p style="margin-top:1rem;margin-bottom:0;">Exit code 0 is clean, 1 warnings only, 2 errors. Errors block a file; warnings do not, but each one costs score.</p>
       </div>
-      <div class="wn-card">
-        <div class="wn-icon">📬</div>
-        <h3>2. Upload to the portal</h3>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Upload to the portal</h3>
         <p>Submit at <a href="https://huggingface.co/spaces/sahel-sh/submit" target="_blank">the MAST 2026 submission portal</a> with your registered team name, the track, and an email address from your registration. Upload one <code>.jsonl</code> (or <code>.jsonl.gz</code>), or one <code>.zip</code> / <code>.tar.gz</code> holding one file per language, named however you like.</p>
-        <p>The page validates the upload, shows one row per language with what will happen to it, and records every clean file in one step. Files with errors are not recorded; fix them and upload again, and unchanged languages are skipped automatically.</p>
+        <p style="margin-bottom:0;">The page validates the upload, shows one row per language with what will happen to it, and records every clean file in one step. Files with errors are not recorded; fix them and upload again, and unchanged languages are skipped automatically.</p>
       </div>
-      <div class="wn-card">
-        <div class="wn-icon">🗂️</div>
-        <h3>3. Slots and receipts</h3>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Slots and receipts</h3>
         <p>Three slots per team, track and language. A new run takes the next free slot; when all three are filled, tick <em>replace the oldest run</em> to overwrite the oldest. Every recorded run gets a receipt id and a sha256; keep the receipt, it is your proof of submission and exactly what gets evaluated.</p>
-        <p>Query ids may be the dataset form (<code>"zh-798"</code>) or the bare number shown above; both are accepted. Deadline: <strong>September 15, 2026, 23:59 AoE</strong>.</p>
+        <p style="margin-bottom:0;">Query ids may be the dataset form (<code>"zh-798"</code>) or the bare number shown above; both are accepted. Deadline: <strong>September 15, 2026, 23:59 AoE</strong>.</p>
       </div>
     </div>
   </div>

@@ -59,7 +59,7 @@
       </div>
       <div class="stat-divider"></div>
       <div class="stat">
-        <span class="stat-num">1,200</span>
+        <span class="stat-num">1,050</span>
         <span class="stat-label">Query–Answer Pairs</span>
       </div>
       <div class="stat-divider"></div>
@@ -80,6 +80,13 @@
   <div class="container">
     <span class="news-label">📣 News</span>
     <ul class="news-list">
+      <li>
+        <span class="news-badge">New</span>
+        <span class="news-date">September 9, 2026</span> — <strong>The submission portal is now open.</strong>
+        Please review the <a href="#submission-format">submission format</a> closely and validate every run with
+        <a href="https://github.com/mast-benchmark/mast-validate" target="_blank"><code>mast-validate</code></a>
+        before uploading — the portal runs the same checks, and files with errors are rejected.
+      </li>
       <li><span class="news-date">August 1, 2026</span> — Test queries are now released: <a href="https://huggingface.co/datasets/mast-benchmark/multilingual-queries-2026" target="_blank">Multilingual queries</a>, <a href="https://huggingface.co/datasets/mast-benchmark/indic-queries-2026" target="_blank">Indic queries</a>, and <a href="https://huggingface.co/datasets/mast-benchmark/100k-corpus-2026" target="_blank">100K document corpus</a>.</li>
       <li><span class="news-date">June 10, 2026</span> — Track website is live! Registration is now open.</li>
     </ul>
@@ -417,14 +424,14 @@
           -->
           <tr>
             <td><span class="lb-rank lb-rank-1">1</span></td>
-            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-30B</a> <span class="lb-tag">Baseline</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-DR-30B</a> <span class="lb-tag">Baseline</span></td>
             <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
             <td><span class="lb-type agentic">Agentic</span></td>
             <td class="lb-primary lb-score">38.40</td>
             <td class="lb-score">47.00</td>
             <td class="lb-score">26.22</td>
           </tr>
-        </tbody>
+        </tbody>Tongyi-DR-30B
       </table>
 
       <h4 class="lb-sub-heading">Per-language results</h4>
@@ -433,7 +440,7 @@
           <tr>
             <th rowspan="2">Language</th>
             <th rowspan="2">Tier</th>
-            <th colspan="3" class="lb-model-group">Tongyi-30B</th>
+            <th colspan="3" class="lb-model-group">Tongyi-DR-30B</th>
           </tr>
           <tr class="lb-metric-headings">
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
@@ -478,7 +485,7 @@
           <!-- Track 2 rows use the same seven-column format as Track 1. -->
           <tr>
             <td><span class="lb-rank lb-rank-1">1</span></td>
-            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-30B</a> <span class="lb-tag">Baseline</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-DR-30B</a> <span class="lb-tag">Baseline</span></td>
             <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
             <td><span class="lb-type agentic">Agentic</span></td>
             <td class="lb-primary lb-score">35.78</td>
@@ -494,7 +501,7 @@
           <tr>
             <th rowspan="2">Language</th>
             <th rowspan="2">Tier</th>
-            <th colspan="3" class="lb-model-group">Tongyi-30B</th>
+            <th colspan="3" class="lb-model-group">Tongyi-DR-30B</th>
           </tr>
           <tr class="lb-metric-headings">
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
@@ -515,8 +522,7 @@
     </div>
 
     <div class="lb-legend">
-      <span class="lb-legend-item"><span class="lb-type agentic">Agentic</span> iterative search + reasoning</span>
-      <span class="lb-legend-item"><span class="lb-type retrieval">Retrieval-only</span> single-shot retrieval, no agent loop</span>
+      <span class="lb-legend-item"><span class="lb-type agentic">Agentic</span> iterative search (snippet only - 512 tokens; five snippets per search) + reasoning</span>
     </div>
 
     <p class="table-note">

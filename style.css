@@ -33,7 +33,10 @@
   --transition:  0.2s ease;
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 5rem; }
+
+/* Keep anchor targets clear of the fixed navbar */
+[id] { scroll-margin-top: 5rem; }
 
 body {
   font-family: var(--font);

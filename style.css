@@ -736,7 +736,7 @@ code {
 .lb-perlang td:first-child { text-align: left; }
 .lb-perlang thead tr:first-child th { border-bottom: 1px solid var(--gray-200); }
 
-.lb-metrics { max-width: 1100px; }
+.lb-metrics { max-width: 1320px; }
 .lb-metrics .lb-model-group {
   color: var(--blue);
   background: var(--blue-light);
@@ -749,8 +749,10 @@ code {
 }
 .lb-metrics .lb-metric-headings th:first-child,
 .lb-metrics .lb-metric-headings th:nth-child(4),
+.lb-metrics .lb-metric-headings th:nth-child(7),
 .lb-metrics tbody td:nth-child(3),
-.lb-metrics tbody td:nth-child(6) {
+.lb-metrics tbody td:nth-child(6),
+.lb-metrics tbody td:nth-child(9) {
   border-left: 2px solid var(--gray-200);
 }
 .lb-perlang.lb-metrics td { font-size: 0.76rem; }

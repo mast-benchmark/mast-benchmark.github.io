@@ -23,8 +23,8 @@
       <li><a href="#tracks">Tracks</a></li>
       <li><a href="#languages">Languages</a></li>
       <li><a href="#leaderboard">Leaderboard</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#working-notes">Working Notes</a></li>
+      <li><a href="#how-to-submit">Submission</a></li>
+      <li><a href="#timeline">Schedule</a></li>
       <li><a href="#participate">Participate</a></li>
       <li><a href="#organizers">Organizers</a></li>
       <li><a href="#register" class="nav-cta">Register</a></li>
@@ -82,7 +82,7 @@
     <ul class="news-list">
       <li>
         <span class="news-badge">New</span>
-        <span class="news-date">September 14, 2026</span> — <strong>The run submission deadline is extended to September 20, 2026, 23:59 AoE.</strong>
+        <span class="news-date">September 18, 2026</span> — <strong>The run submission deadline is extended to September 25, 2026, 23:59 AoE.</strong>
         The original deadline of <span class="date-old">September 15, 2026</span> no longer applies, and
         <a href="#register">registration</a> now closes on the same date. All later dates
         (declaration of results, working notes, and the overview paper) are unchanged. See the
@@ -401,11 +401,6 @@
       <p class="section-sub">Official ranking by <strong>Exact Match (EM) accuracy</strong> on the held-out test queries</p>
     </div>
 
-    <div class="lb-tabs" role="tablist">
-      <button class="lb-tab active" data-lb="multilingual" role="tab">MAST Multilingual</button>
-      <button class="lb-tab" data-lb="indic" role="tab">MAST Indic</button>
-    </div>
-
     <!-- Track 1 — MAST Multilingual leaderboard -->
     <div class="lb-table-wrap" id="lb-multilingual">
       <p class="section-sub lb-track-caption">Track 1 — MAST Multilingual: 15 typologically diverse languages</p>
@@ -508,7 +503,7 @@
     </div>
 
     <!-- Track 2 — MAST Indic leaderboard -->
-    <div class="lb-table-wrap hidden" id="lb-indic">
+    <div class="lb-table-wrap" id="lb-indic" style="margin-top:3rem;">
       <p class="section-sub lb-track-caption">Track 2 — MAST Indic: 9 Indian languages</p>
       <table class="lang-table lb-table">
         <thead>
@@ -656,6 +651,9 @@
     <div class="section-header" id="how-to-submit" style="margin-top:3.5rem;">
       <h2>How to Submit</h2>
       <p class="section-sub">Validate offline, then upload through the submission portal.</p>
+      <p style="margin-top:1.5rem;margin-bottom:0;">
+        <a href="https://huggingface.co/spaces/sahel-sh/submit" target="_blank" class="btn btn-primary btn-lg">Submit here → MAST 2026 portal</a>
+      </p>
     </div>
     <div class="submit-steps">
       <div class="step">
@@ -688,7 +686,7 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
         <div class="step-num">03</div>
         <h3>Slots and receipts</h3>
         <p>Three slots per team, track and language. A new run takes the next free slot; when all three are filled, tick <em>replace the oldest run</em> to overwrite the oldest. Every recorded run gets a receipt id and a sha256; keep the receipt, it is your proof of submission and exactly what gets evaluated.</p>
-        <p style="margin-bottom:0;">Query ids may be the dataset form (<code>"zh-798"</code>) or a bare number such as <code>798</code>; both are accepted. Deadline: <span class="date-old">September 15, 2026</span> <strong>September 20, 2026, 23:59 AoE</strong>.</p>
+        <p style="margin-bottom:0;">Query ids may be the dataset form (<code>"zh-798"</code>) or a bare number such as <code>798</code>; both are accepted. Deadline: <span class="date-old">September 15, 2026</span> <strong>September 25, 2026, 23:59 AoE</strong>.</p>
       </div>
     </div>
   </div>
@@ -713,8 +711,10 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
         <div class="wn-icon">📐</div>
         <h3>Format</h3>
         <p>Working notes must follow the <strong>CEUR-WS single-column format</strong> (<code>ceurart</code> style, as used by the CEUR Workshop Proceedings). Minimum <strong>6 pages</strong>, maximum <strong>10 pages</strong>, <em>including</em> references. Use descriptive titles — do not include team or track names in the title.</p>
-        <p>- <a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/hpvjjzhjxzjk" target="_blank">Overleaf Template (CEUR-WS)</a></p>
-        <p>- <a href="https://ceur-ws.org/Vol-4173/" target="_blank">Examples (FIRE 2025 Working Notes)</a></p>
+        <ul class="wn-list">
+          <li><a href="https://www.overleaf.com/latex/templates/template-for-submissions-to-ceur-workshop-proceedings-ceur-ws-dot-org/hpvjjzhjxzjk" target="_blank">Overleaf Template (CEUR-WS)</a></li>
+          <li><a href="https://ceur-ws.org/Vol-4173/" target="_blank">Examples (FIRE 2025 Working Notes)</a></li>
+        </ul>
       </div>
 
       <div class="wn-card">
@@ -733,7 +733,7 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
         <div class="wn-icon">📅</div>
         <h3>Deadlines</h3>
         <ul class="wn-list">
-          <li><span class="date-old">Sep 15, 2026</span> <strong>Sep 20, 2026</strong> — Run submission deadline</li>
+          <li><span class="date-old">Sep 15, 2026</span> <strong>Sep 25, 2026</strong> — Run submission deadline</li>
           <li><strong>Sep 30, 2026</strong> — Declaration of results</li>
           <li><strong>Oct 15, 2026</strong> — Camera-ready copies of working notes due</li>
           <li><strong>Oct 30, 2026</strong> — Overview paper due</li>
@@ -770,7 +770,7 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <div class="tl-date"><span class="date-old">September 15, 2026</span> September 20, 2026</div>
+          <div class="tl-date"><span class="date-old">September 15, 2026</span> September 25, 2026</div>
           <div class="tl-event">Run submission deadline</div>
         </div>
       </div>
@@ -824,7 +824,7 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
       <div class="step">
         <div class="step-num">03</div>
         <h3>Submit Runs</h3>
-        <p>Validate your JSONL files with <code>mast-validate</code>, then upload up to 3 runs per language through the submission portal before <span class="date-old">September 15, 2026</span> September 20, 2026. Submit a working note describing your system and approach (6–10 pages including references, CEUR-WS format).</p>
+        <p>Validate your JSONL files with <code>mast-validate</code>, then upload up to 3 runs per language through the submission portal before <span class="date-old">September 15, 2026</span> September 25, 2026. Submit a working note describing your system and approach (6–10 pages including references, CEUR-WS format).</p>
         <a href="#how-to-submit" class="btn btn-outline btn-sm">How to submit →</a>
       </div>
     </div>
@@ -856,7 +856,7 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
       </div>
       <div class="register-action">
         <a href="https://forms.gle/MBLHJcG7RXrgj42G8" class="btn btn-white btn-lg">Register via Google Forms →</a>
-        <p class="register-note">Registration closes <span class="date-old">September 15th, 2026</span> September 20th, 2026.</p>
+        <p class="register-note">Registration closes September 25th, 2026.</p>
       </div>
     </div>
   </div>
@@ -1024,16 +1024,6 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
       document.querySelectorAll('.lang-table-wrap').forEach(w => w.classList.add('hidden'));
       tab.classList.add('active');
       document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
-    });
-  });
-
-  // Leaderboard tabs (scoped separately from the language tabs)
-  document.querySelectorAll('.lb-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.lb-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.lb-table-wrap').forEach(w => w.classList.add('hidden'));
-      tab.classList.add('active');
-      document.getElementById('lb-' + tab.dataset.lb).classList.remove('hidden');
     });
   });
 

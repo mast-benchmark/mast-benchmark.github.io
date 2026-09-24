@@ -82,6 +82,12 @@
     <ul class="news-list">
       <li>
         <span class="news-badge">New</span>
+        <span class="news-date">September 24, 2026</span> — <strong>The working notes submission portal is now active.</strong>
+        Submit your working notes via the
+        <a href="https://cmt3.research.microsoft.com/FIRE2026" target="_blank" rel="noopener">FIRE 2026 CMT portal</a>.
+        See <a href="#working-notes">Working Notes</a> for format and content guidelines.
+      </li>
+      <li>
         <span class="news-date">September 18, 2026</span> — <strong>The run submission deadline is extended to September 25, 2026, 23:59 AoE.</strong>
         The original deadline of <span class="date-old">September 15, 2026</span> no longer applies, and
         <a href="#register">registration</a> now closes on the same date. All later dates
@@ -455,6 +461,16 @@
           </tr>
           <tr>
             <td><span class="lb-rank lb-rank-3">3</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-DR-30B</a> <span class="lb-tag">Baseline</span></td>
+            <td><a href="https://huggingface.co/lightonai/mLateOn" target="_blank" rel="noopener" class="lb-link"><code>mLateOn</code></a></td>
+            <td><span class="lb-type agentic">Agentic</span></td>
+            <td>Opus 5</td>
+            <td class="lb-primary lb-score">33.73</td>
+            <td class="lb-score">44.80</td>
+            <td class="lb-score">25.28</td>
+          </tr>
+          <tr>
+            <td><span class="lb-rank">4</span></td>
             <td class="lb-system"><a href="https://huggingface.co/rl-research/DR-Tulu-8B" target="_blank" rel="noopener" class="lb-link">DR-Tulu-8B</a> <span class="lb-tag">Baseline</span></td>
             <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
             <td><span class="lb-type agentic">Agentic</span></td>
@@ -473,31 +489,33 @@
             <th rowspan="2">Language</th>
             <th rowspan="2">Tier</th>
             <th colspan="3" class="lb-model-group">gpt-oss-20b</th>
-            <th colspan="3" class="lb-model-group">Tongyi-DR-30B</th>
+            <th colspan="3" class="lb-model-group">Tongyi-DR-30B<br>(Qwen3-8B)</th>
+            <th colspan="3" class="lb-model-group">Tongyi-DR-30B<br>(mLateOn)</th>
             <th colspan="3" class="lb-model-group">DR-Tulu-8B</th>
           </tr>
           <tr class="lb-metric-headings">
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
+            <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="lb-language">English <code>en</code></td><td><span class="badge-tier high">High</span></td><td>48.00</td><td>62.83</td><td>28.46</td><td>50.00</td><td>64.36</td><td>30.60</td><td>32.00</td><td>43.63</td><td>5.00</td></tr>
-          <tr><td class="lb-language">Chinese <code>zh</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>61.85</td><td>27.26</td><td>38.00</td><td>40.71</td><td>23.28</td><td>12.00</td><td>21.51</td><td>4.72</td></tr>
-          <tr><td class="lb-language">French <code>fr</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>60.08</td><td>28.16</td><td>42.00</td><td>48.94</td><td>28.18</td><td>18.00</td><td>31.94</td><td>4.62</td></tr>
-          <tr><td class="lb-language">Russian <code>ru</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>60.29</td><td>28.98</td><td>36.00</td><td>51.93</td><td>26.66</td><td>18.00</td><td>30.53</td><td>4.84</td></tr>
-          <tr><td class="lb-language">Spanish <code>es</code></td><td><span class="badge-tier high">High</span></td><td>40.00</td><td>48.37</td><td>27.70</td><td>46.00</td><td>50.81</td><td>28.06</td><td>16.00</td><td>27.33</td><td>4.62</td></tr>
-          <tr><td class="lb-language">German <code>de</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>55.68</td><td>26.00</td><td>36.00</td><td>46.69</td><td>26.12</td><td>10.00</td><td>23.97</td><td>4.86</td></tr>
-          <tr><td class="lb-language">Arabic <code>ar</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>55.57</td><td>28.12</td><td>52.00</td><td>52.92</td><td>26.08</td><td>12.00</td><td>26.56</td><td>4.56</td></tr>
-          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>55.12</td><td>27.92</td><td>44.00</td><td>54.72</td><td>26.72</td><td>16.00</td><td>21.82</td><td>4.78</td></tr>
-          <tr><td class="lb-language">Finnish <code>fi</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>51.77</td><td>28.88</td><td>34.00</td><td>50.16</td><td>29.92</td><td>14.00</td><td>23.22</td><td>5.06</td></tr>
-          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>56.68</td><td>27.72</td><td>48.00</td><td>51.03</td><td>25.12</td><td>16.00</td><td>26.20</td><td>4.82</td></tr>
-          <tr><td class="lb-language">Thai <code>th</code></td><td><span class="badge-tier mid">Mid</span></td><td>32.00</td><td>50.97</td><td>26.66</td><td>30.00</td><td>40.56</td><td>19.88</td><td>8.00</td><td>23.85</td><td>4.88</td></tr>
-          <tr><td class="lb-language">Urdu <code>ur</code></td><td><span class="badge-tier mid">Mid</span></td><td>38.00</td><td>51.63</td><td>26.88</td><td>36.00</td><td>51.56</td><td>27.48</td><td>12.00</td><td>20.81</td><td>4.60</td></tr>
-          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>56.00</td><td>29.70</td><td>46.00</td><td>48.94</td><td>25.06</td><td>10.00</td><td>21.79</td><td>4.52</td></tr>
-          <tr><td class="lb-language">Swahili <code>sw</code></td><td><span class="badge-tier low">Low</span></td><td>28.00</td><td>44.96</td><td>27.16</td><td>24.00</td><td>29.84</td><td>25.28</td><td>2.00</td><td>7.29</td><td>4.92</td></tr>
-          <tr><td class="lb-language">Welsh <code>cy</code></td><td><span class="badge-tier low">Low</span></td><td>32.00</td><td>43.31</td><td>27.26</td><td>24.00</td><td>30.37</td><td>22.10</td><td>4.00</td><td>12.39</td><td>4.78</td></tr>
+          <tr><td class="lb-language">English <code>en</code></td><td><span class="badge-tier high">High</span></td><td>48.00</td><td>62.83</td><td>28.46</td><td>50.00</td><td>64.36</td><td>30.60</td><td>56.00</td><td>70.53</td><td>23.88</td><td>32.00</td><td>43.63</td><td>5.00</td></tr>
+          <tr><td class="lb-language">Chinese <code>zh</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>61.85</td><td>27.26</td><td>38.00</td><td>40.71</td><td>23.28</td><td>12.00</td><td>16.26</td><td>53.14</td><td>12.00</td><td>21.51</td><td>4.72</td></tr>
+          <tr><td class="lb-language">French <code>fr</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>60.08</td><td>28.16</td><td>42.00</td><td>48.94</td><td>28.18</td><td>46.00</td><td>63.43</td><td>26.78</td><td>18.00</td><td>31.94</td><td>4.62</td></tr>
+          <tr><td class="lb-language">Russian <code>ru</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>60.29</td><td>28.98</td><td>36.00</td><td>51.93</td><td>26.66</td><td>38.00</td><td>51.60</td><td>21.50</td><td>18.00</td><td>30.53</td><td>4.84</td></tr>
+          <tr><td class="lb-language">Spanish <code>es</code></td><td><span class="badge-tier high">High</span></td><td>40.00</td><td>48.37</td><td>27.70</td><td>46.00</td><td>50.81</td><td>28.06</td><td>50.00</td><td>64.99</td><td>22.50</td><td>16.00</td><td>27.33</td><td>4.62</td></tr>
+          <tr><td class="lb-language">German <code>de</code></td><td><span class="badge-tier high">High</span></td><td>44.00</td><td>55.68</td><td>26.00</td><td>36.00</td><td>46.69</td><td>26.12</td><td>44.00</td><td>63.66</td><td>24.62</td><td>10.00</td><td>23.97</td><td>4.86</td></tr>
+          <tr><td class="lb-language">Arabic <code>ar</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>55.57</td><td>28.12</td><td>52.00</td><td>52.92</td><td>26.08</td><td>44.00</td><td>51.36</td><td>24.38</td><td>12.00</td><td>26.56</td><td>4.56</td></tr>
+          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>55.12</td><td>27.92</td><td>44.00</td><td>54.72</td><td>26.72</td><td>38.00</td><td>43.25</td><td>20.50</td><td>16.00</td><td>21.82</td><td>4.78</td></tr>
+          <tr><td class="lb-language">Finnish <code>fi</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>51.77</td><td>28.88</td><td>34.00</td><td>50.16</td><td>29.92</td><td>28.00</td><td>44.12</td><td>24.74</td><td>14.00</td><td>23.22</td><td>5.06</td></tr>
+          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>56.68</td><td>27.72</td><td>48.00</td><td>51.03</td><td>25.12</td><td>38.00</td><td>47.43</td><td>24.44</td><td>16.00</td><td>26.20</td><td>4.82</td></tr>
+          <tr><td class="lb-language">Thai <code>th</code></td><td><span class="badge-tier mid">Mid</span></td><td>32.00</td><td>50.97</td><td>26.66</td><td>30.00</td><td>40.56</td><td>19.88</td><td>12.00</td><td>15.83</td><td>16.10</td><td>8.00</td><td>23.85</td><td>4.88</td></tr>
+          <tr><td class="lb-language">Urdu <code>ur</code></td><td><span class="badge-tier mid">Mid</span></td><td>38.00</td><td>51.63</td><td>26.88</td><td>36.00</td><td>51.56</td><td>27.48</td><td>34.00</td><td>45.22</td><td>25.20</td><td>12.00</td><td>20.81</td><td>4.60</td></tr>
+          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>56.00</td><td>29.70</td><td>46.00</td><td>48.94</td><td>25.06</td><td>34.00</td><td>46.17</td><td>25.34</td><td>10.00</td><td>21.79</td><td>4.52</td></tr>
+          <tr><td class="lb-language">Swahili <code>sw</code></td><td><span class="badge-tier low">Low</span></td><td>28.00</td><td>44.96</td><td>27.16</td><td>24.00</td><td>29.84</td><td>25.28</td><td>18.00</td><td>27.60</td><td>25.96</td><td>2.00</td><td>7.29</td><td>4.92</td></tr>
+          <tr><td class="lb-language">Welsh <code>cy</code></td><td><span class="badge-tier low">Low</span></td><td>32.00</td><td>43.31</td><td>27.26</td><td>24.00</td><td>30.37</td><td>22.10</td><td>14.00</td><td>20.62</td><td>20.16</td><td>4.00</td><td>12.39</td><td>4.78</td></tr>
         </tbody>
       </table>
     </div>
@@ -542,6 +560,16 @@
           </tr>
           <tr>
             <td><span class="lb-rank lb-rank-3">3</span></td>
+            <td class="lb-system"><a href="https://huggingface.co/Alibaba-NLP/Tongyi-DeepResearch-30B-A3B" target="_blank" rel="noopener" class="lb-link">Tongyi-DR-30B</a> <span class="lb-tag">Baseline</span></td>
+            <td><a href="https://huggingface.co/lightonai/mLateOn" target="_blank" rel="noopener" class="lb-link"><code>mLateOn</code></a></td>
+            <td><span class="lb-type agentic">Agentic</span></td>
+            <td>Opus 5</td>
+            <td class="lb-primary lb-score">32.44</td>
+            <td class="lb-score">43.04</td>
+            <td class="lb-score">19.88</td>
+          </tr>
+          <tr>
+            <td><span class="lb-rank">4</span></td>
             <td class="lb-system"><a href="https://huggingface.co/rl-research/DR-Tulu-8B" target="_blank" rel="noopener" class="lb-link">DR-Tulu-8B</a> <span class="lb-tag">Baseline</span></td>
             <td><a href="https://huggingface.co/Qwen/Qwen3-Embedding-8B" target="_blank" rel="noopener" class="lb-link"><code>Qwen3-8B</code></a></td>
             <td><span class="lb-type agentic">Agentic</span></td>
@@ -560,25 +588,27 @@
             <th rowspan="2">Language</th>
             <th rowspan="2">Tier</th>
             <th colspan="3" class="lb-model-group">gpt-oss-20b</th>
-            <th colspan="3" class="lb-model-group">Tongyi-DR-30B</th>
+            <th colspan="3" class="lb-model-group">Tongyi-DR-30B<br>(Qwen3-8B)</th>
+            <th colspan="3" class="lb-model-group">Tongyi-DR-30B<br>(mLateOn)</th>
             <th colspan="3" class="lb-model-group">DR-Tulu-8B</th>
           </tr>
           <tr class="lb-metric-headings">
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
             <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
+            <th>EM (%)</th><th>Recall (%)</th><th>Search Turns</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>56.68</td><td>27.72</td><td>48.00</td><td>51.03</td><td>25.12</td><td>16.00</td><td>26.20</td><td>4.82</td></tr>
-          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>55.12</td><td>27.92</td><td>44.00</td><td>54.72</td><td>26.72</td><td>16.00</td><td>21.82</td><td>4.78</td></tr>
-          <tr><td class="lb-language">Telugu <code>te</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>50.66</td><td>27.48</td><td>38.00</td><td>41.08</td><td>23.98</td><td>16.00</td><td>24.23</td><td>4.58</td></tr>
-          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>56.00</td><td>29.70</td><td>46.00</td><td>48.94</td><td>25.06</td><td>10.00</td><td>21.79</td><td>4.52</td></tr>
-          <tr><td class="lb-language">Gujarati <code>gu</code></td><td><span class="badge-tier mid">Mid</span></td><td>46.00</td><td>62.24</td><td>26.36</td><td>24.00</td><td>36.62</td><td>20.66</td><td>20.00</td><td>33.06</td><td>4.28</td></tr>
-          <tr><td class="lb-language">Kannada <code>kn</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>51.19</td><td>29.22</td><td>38.00</td><td>51.40</td><td>29.96</td><td>18.00</td><td>34.54</td><td>4.12</td></tr>
-          <tr><td class="lb-language">Punjabi <code>pa</code></td><td><span class="badge-tier low">Low</span></td><td>48.00</td><td>58.63</td><td>28.10</td><td>38.00</td><td>50.72</td><td>29.80</td><td>18.00</td><td>28.88</td><td>4.44</td></tr>
-          <tr><td class="lb-language">Malayalam <code>ml</code></td><td><span class="badge-tier low">Low</span></td><td>44.00</td><td>66.28</td><td>26.46</td><td>34.00</td><td>45.82</td><td>23.78</td><td>20.00</td><td>32.09</td><td>4.20</td></tr>
-          <tr><td class="lb-language">Odia <code>or</code></td><td><span class="badge-tier low">Low</span></td><td>36.00</td><td>58.12</td><td>26.20</td><td>34.00</td><td>45.13</td><td>26.32</td><td>12.00</td><td>16.81</td><td>4.34</td></tr>
+          <tr><td class="lb-language">Hindi <code>hi</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>56.68</td><td>27.72</td><td>48.00</td><td>51.03</td><td>25.12</td><td>38.00</td><td>47.43</td><td>24.44</td><td>16.00</td><td>26.20</td><td>4.82</td></tr>
+          <tr><td class="lb-language">Bengali <code>bn</code></td><td><span class="badge-tier mid">Mid</span></td><td>40.00</td><td>55.12</td><td>27.92</td><td>44.00</td><td>54.72</td><td>26.72</td><td>38.00</td><td>43.25</td><td>20.50</td><td>16.00</td><td>21.82</td><td>4.78</td></tr>
+          <tr><td class="lb-language">Telugu <code>te</code></td><td><span class="badge-tier mid">Mid</span></td><td>44.00</td><td>50.66</td><td>27.48</td><td>38.00</td><td>41.08</td><td>23.98</td><td>32.00</td><td>42.76</td><td>16.46</td><td>16.00</td><td>24.23</td><td>4.58</td></tr>
+          <tr><td class="lb-language">Tamil <code>ta</code></td><td><span class="badge-tier mid">Mid</span></td><td>42.00</td><td>56.00</td><td>29.70</td><td>46.00</td><td>48.94</td><td>25.06</td><td>34.00</td><td>46.17</td><td>25.34</td><td>10.00</td><td>21.79</td><td>4.52</td></tr>
+          <tr><td class="lb-language">Gujarati <code>gu</code></td><td><span class="badge-tier mid">Mid</span></td><td>46.00</td><td>62.24</td><td>26.36</td><td>24.00</td><td>36.62</td><td>20.66</td><td>24.00</td><td>33.16</td><td>14.26</td><td>20.00</td><td>33.06</td><td>4.28</td></tr>
+          <tr><td class="lb-language">Kannada <code>kn</code></td><td><span class="badge-tier mid">Mid</span></td><td>34.00</td><td>51.19</td><td>29.22</td><td>38.00</td><td>51.40</td><td>29.96</td><td>32.00</td><td>41.55</td><td>17.84</td><td>18.00</td><td>34.54</td><td>4.12</td></tr>
+          <tr><td class="lb-language">Punjabi <code>pa</code></td><td><span class="badge-tier low">Low</span></td><td>48.00</td><td>58.63</td><td>28.10</td><td>38.00</td><td>50.72</td><td>29.80</td><td>40.00</td><td>53.37</td><td>21.28</td><td>18.00</td><td>28.88</td><td>4.44</td></tr>
+          <tr><td class="lb-language">Malayalam <code>ml</code></td><td><span class="badge-tier low">Low</span></td><td>44.00</td><td>66.28</td><td>26.46</td><td>34.00</td><td>45.82</td><td>23.78</td><td>24.00</td><td>36.83</td><td>16.00</td><td>20.00</td><td>32.09</td><td>4.20</td></tr>
+          <tr><td class="lb-language">Odia <code>or</code></td><td><span class="badge-tier low">Low</span></td><td>36.00</td><td>58.12</td><td>26.20</td><td>34.00</td><td>45.13</td><td>26.32</td><td>30.00</td><td>42.86</td><td>22.82</td><td>12.00</td><td>16.81</td><td>4.34</td></tr>
         </tbody>
       </table>
     </div>
@@ -698,13 +728,16 @@ mast-validate runs.zip --track multilingual --json report.json</code></pre>
     <div class="section-header">
       <h2>Working Notes</h2>
       <p class="section-sub">System description papers for FIRE 2026 proceedings</p>
+      <p style="margin-top:1.5rem;margin-bottom:0;">
+        <a href="https://cmt3.research.microsoft.com/FIRE2026" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Submit working notes → FIRE 2026 CMT portal</a>
+      </p>
     </div>
     <div class="wn-grid">
 
       <div class="wn-card">
         <div class="wn-icon">📄</div>
         <h3>Submission</h3>
-        <p>Each participating team must submit <strong>one working note per track</strong> describing their system and approach. Working notes are submitted centrally via the <strong>FIRE 2026 submission system</strong>.</p>
+        <p>Each participating team must submit <strong>one working note per track</strong> describing their system and approach. Working notes are submitted centrally via the <a href="https://cmt3.research.microsoft.com/FIRE2026" target="_blank" rel="noopener"><strong>FIRE 2026 submission system</strong></a>.</p>
       </div>
 
       <div class="wn-card">
